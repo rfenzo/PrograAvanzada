@@ -161,7 +161,6 @@ class Tienda(QTimer):
         self.refresh_rate = mygame.refresh_rate
 
         self.save_signals()
-
         self.buy_range = parametros['Tienda']['buy_range']
         self.items = items
         self.vertices = move_vertices(vertices['Tienda'], self.pos)

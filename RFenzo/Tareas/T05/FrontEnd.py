@@ -588,7 +588,7 @@ class Tienda(QWidget):
         self.parent = parent
         self.items = parent.game.tienda.items
         self.tienda_buy_signal.connect(parent.game.tienda.comprar)
-        buyicon = QIcon('IMGS/Tienda/buy.png')
+        buyicon = QIcon('IMGS/Tienda/Buy.png')
 
         vbox = QVBoxLayout()
 
@@ -600,7 +600,7 @@ class Tienda(QWidget):
 
         hbox1 = QHBoxLayout()
         weap1 = QLabel()
-        img = QPixmap('IMGS/Tienda/arma_de_mano.png')
+        img = QPixmap('IMGS/Tienda/Arma_de_mano.png')
         img = img.scaled(120, 120, Qt.KeepAspectRatio)
         weap1.setPixmap(img)
         self.info1 = QLabel(item_to_text(
@@ -617,7 +617,7 @@ class Tienda(QWidget):
 
         hbox2 = QHBoxLayout()
         weap2 = QLabel()
-        img = QPixmap('IMGS/Tienda/arma_de_distancia.png')
+        img = QPixmap('IMGS/Tienda/Arma_de_distancia.png')
         img = img.scaled(120, 120, Qt.KeepAspectRatio)
         weap2.setPixmap(img)
         self.info2 = QLabel(item_to_text('Arma de distancia',
@@ -634,7 +634,7 @@ class Tienda(QWidget):
 
         hbox3 = QHBoxLayout()
         weap3 = QLabel()
-        img = QPixmap('IMGS/Tienda/botas.png')
+        img = QPixmap('IMGS/Tienda/Botas.png')
         img = img.scaled(120, 120, Qt.KeepAspectRatio)
         weap3.setPixmap(img)
         self.info3 = QLabel(item_to_text('Botas', self.items['Botas']))
@@ -650,7 +650,7 @@ class Tienda(QWidget):
 
         hbox4 = QHBoxLayout()
         weap4 = QLabel()
-        img = QPixmap('IMGS/Tienda/baculo.png')
+        img = QPixmap('IMGS/Tienda/Baculo.png')
         img = img.scaled(120, 120, Qt.KeepAspectRatio)
         weap4.setPixmap(img)
         self.info4 = QLabel(item_to_text('Baculo', self.items['Baculo']))
@@ -666,7 +666,7 @@ class Tienda(QWidget):
 
         hbox5 = QHBoxLayout()
         weap5 = QLabel()
-        img = QPixmap('IMGS/Tienda/armadura.png')
+        img = QPixmap('IMGS/Tienda/Armadura.png')
         img = img.scaled(120, 120, Qt.KeepAspectRatio)
         weap5.setPixmap(img)
         self.info5 = QLabel(item_to_text('Armadura', self.items['Armadura']))
@@ -682,7 +682,7 @@ class Tienda(QWidget):
 
         hbox6 = QHBoxLayout()
         weap6 = QLabel()
-        img = QPixmap('IMGS/Tienda/earthstone.png')
+        img = QPixmap('IMGS/Tienda/Earthstone.png')
         img = img.scaled(120, 120, Qt.KeepAspectRatio)
         weap6.setPixmap(img)
         self.info6 = QLabel(item_to_text(
@@ -829,7 +829,6 @@ class MainWindow(QMainWindow):
     def start_game(self, hero_id):
         self.ingame = InGame(self, hero_id)
         self.setCentralWidget(self.ingame)
-
         menubar = self.menuBar()
         salir = QAction('Salir', self)
         salir.triggered.connect(QCoreApplication.instance().quit)
